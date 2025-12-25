@@ -1,0 +1,79 @@
+{
+  "home": {
+    "hero": {
+      "title": "AI-native SEO & Brand Intelligence",
+      "subtitle": "Understand search with AI-first audits that map intent, signals, and outcomes in one pane.",
+      "cta": "Start a mock audit"
+    },
+    "why": {
+      "heading": "Why AI-SEO is different",
+      "points": [
+        "Answers intent at scale instead of only ranking metrics.",
+        "Connects content, signals, and structured context for clearer remediation.",
+        "Prioritizes business-facing outcomes (visibility, conversions, trust)."
+      ]
+    },
+    "modulesOverview": {
+      "heading": "7 Audit Modules",
+      "modules": [
+        { "key": "technical", "name": "Technical SEO", "description": "Crawlability, indexing and sitemaps." },
+        { "key": "content", "name": "Content Quality", "description": "Depth, uniqueness, and coverage." },
+        { "key": "backlinks", "name": "Backlinks", "description": "Authority and referring domains." },
+        { "key": "cwv", "name": "Core Web Vitals", "description": "LCP, INP, CLS performance." },
+        { "key": "structured", "name": "Structured Data", "description": "Schema for rich results." },
+        { "key": "eeat", "name": "E-E-A-T", "description": "Expertise and trust signals." },
+        { "key": "non_branded", "name": "Non-Branded Coverage", "description": "Intent-led keyword coverage." }
+      ]
+    },
+    "pipeline": {
+      "heading": "How Kasparro works",
+      "steps": [
+        "Input: site crawl, analytics snapshot, search console exports.",
+        "ContextPack: entity & intent synthesis from content and metadata.",
+        "Audit Modules: parallel modules evaluate signals and rank impact.",
+        "Output: prioritized insights, issues, and remediation plan."
+      ]
+    }
+  },
+  "platform": {
+    "title": "Platform overview",
+    "pipeline": {
+      "heading": "Audit pipeline",
+      "stages": [
+        "Input → Normalization → ContextPack → Modules → Recommendations",
+        "Modular audits enable independent scoring and prioritized remediation"
+      ]
+    },
+    "consumes": [
+      "Sitemap and crawl data",
+      "Search Console / analytics exports",
+      "Product & category data feeds",
+      "Manual annotations (brand signals)"
+    ],
+    "outputs": [
+      "Module-level scores and trend signals",
+      "Actionable issues with locations and severity",
+      "Prioritized recommendations with effort estimates",
+      "ContextPack bundles for downstream tools"
+    ],
+    "comparison": {
+      "heading": "Compared to traditional SEO tools",
+      "points": [
+        "Traditional: surface-level metrics (rank, clicks).",
+        "Kasparro: context-aware, intent-first remediation and auditing across signals."
+      ]
+    }
+  },
+  "about": {
+    "mission": "Build tooling that maps search to real business outcomes using modern AI context.",
+    "philosophy": "Make audit outputs actionable: small, prioritized, measurable changes.",
+    "vision": "Search intelligence that treats context as first-class — for brands, not just pages."
+  },
+  "architecture": {
+    "heading": "Kasparro architecture",
+    "inputAssembler": "Collect crawl, sitemaps, analytics, and product feeds into a normalized dataset.",
+    "contextPack": "Synthesize entities, intents and metadata into a lightweight context bundle used by audits.",
+    "modules": "Independent audit modules evaluate discrete signals (technical, content, backlinks, CWV, structured, E-E-A-T, non-branded coverage).",
+    "outputs": "Prioritized insights, issues with locations, and remediation recommendations with effort and priority metadata."
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "reports": [
+    {
+      "brandId": "brand_01",
+      "generatedAt": "2025-12-01T08:30:00.000Z",
+      "modules": [
+        {
+          "id": "m_technical",
+          "key": "technical",
+          "name": "Technical SEO",
+          "description": "Crawlability, indexing, sitemaps, robots",
+          "score": { "value": 72, "grade": "B", "trend": "flat" },
+          "insights": [
+            { "id": "i1", "title": "XML sitemap missing critical pages", "detail": "Several category pages are not included in the sitemap.", "impact": "medium", "evidence": ["/category/shoes", "/category/accessories"] },
+            { "id": "i2", "title": "Robots.txt allows crawler blocking", "detail": "Templates directory disallowed which blocks important assets.", "impact": "high" }
+          ],
+          "issues": [
+            { "id": "iss1", "title": "4xx response on top product pages", "description": "Top product pages intermittently return 404s.", "severity": "high", "url": "/product/sku-123", "occurrences": 3 },
+            { "id": "iss2", "title": "Missing canonical tags", "description": "Multiple list pages lack canonical tags leading to duplicate signals.", "severity": "medium" }
+          ],
+          "recommendations": [
+            { "id": "r1", "title": "Regenerate sitemap including category pages", "detail": "Include all live category and product pages in sitemap.xml and submit to Search Console.", "effort": "low", "priority": 1 },
+            { "id": "r2", "title": "Add canonical tags to list pages", "detail": "Ensure list pages set canonical to primary pagination-free URL.", "effort": "medium", "priority": 2 }
+          ]
+        },
+        {
+          "id": "m_content",
+          "key": "content",
+          "name": "Content Quality",
+          "description": "Depth, uniqueness, topical coverage",
+          "score": { "value": 64, "grade": "C", "trend": "down" },
+          "insights": [
+            { "id": "i3", "title": "Shallow product descriptions", "detail": "~70% of product pages use manufacturer text only.", "impact": "high" },
+            { "id": "i4", "title": "Thin category pages", "detail": "Category landing pages lack unique editorial content.", "impact": "medium" }
+          ],
+          "issues": [
+            { "id": "iss3", "title": "Duplicate content across SKUs", "description": "Several SKUs share identical descriptions.", "severity": "high" },
+            { "id": "iss4", "title": "Missing alt text for hero images", "description": "Product hero images missing alt attributes.", "severity": "low" }
+          ],
+          "recommendations": [
+            { "id": "r3", "title": "Enrich product descriptions", "detail": "Add 150-300 words unique copy focusing on use cases and benefits.", "effort": "medium", "priority": 1 },
+            { "id": "r4", "title": "Add alt text to major images", "detail": "Provide descriptive alt text for accessibility and image understanding.", "effort": "low", "priority": 3 }
+          ]
+        },
+        {
+          "id": "m_backlinks",
+          "key": "backlinks",
+          "name": "Backlinks",
+          "description": "Link profile, authority signals",
+          "score": { "value": 58, "grade": "D", "trend": "down" },
+          "insights": [
+            { "id": "i5", "title": "Low referring domain diversity", "detail": "Top backlinks concentrated from <5 domains.", "impact": "high" }
+          ],
+          "issues": [
+            { "id": "iss5", "title": "Toxic links detected", "description": "Some backlinks flagged as potentially spammy.", "severity": "medium" }
+          ],
+          "recommendations": [
+            { "id": "r5", "title": "Pursue diverse editorial links", "detail": "Create linkable assets and outreach plan focused on niche publications.", "effort": "high", "priority": 1 }
+          ]
+        },
+        {
+          "id": "m_cwv",
+          "key": "cwv",
+          "name": "Core Web Vitals",
+          "description": "LCP, FID/INP, CLS performance",
+          "score": { "value": 80, "grade": "B", "trend": "up" },
+          "insights": [
+            { "id": "i6", "title": "LCP improved on desktop", "detail": "Optimized images reduced LCP by 400ms.", "impact": "medium" }
+          ],
+          "issues": [
+            { "id": "iss6", "title": "CLS spikes on product pages", "description": "Layout shifts caused by late-loading images.", "severity": "medium" }
+          ],
+          "recommendations": [
+            { "id": "r6", "title": "Reserve image dimensions and use preload", "detail": "Set width/height and consider rel=preload for hero images.", "effort": "low", "priority": 2 }
+          ]
+        },
+        {
+          "id": "m_structured",
+          "key": "structured",
+          "name": "Structured Data",
+          "description": "Schema markup, rich results",
+          "score": { "value": 70, "grade": "B", "trend": "flat" },
+          "insights": [
+            { "id": "i7", "title": "Product schema present but incomplete", "detail": "Missing aggregateRating and offers for many products.", "impact": "medium" }
+          ],
+          "issues": [
+            { "id": "iss7", "title": "Invalid JSON-LD snippets", "description": "A few pages return schema errors in Search Console.", "severity": "medium" }
+          ],
+          "recommendations": [
+            { "id": "r7", "title": "Complete product schema fields", "detail": "Add offers, availability, and aggregateRating where available.", "effort": "medium", "priority": 2 }
+          ]
+        },
+        {
+          "id": "m_eeat",
+          "key": "eeat",
+          "name": "E-E-A-T",
+          "description": "Expertise, Experience, Authoritativeness, Trust",
+          "score": { "value": 72, "grade": "B", "trend": "up" },
+          "insights": [
+            { "id": "i8", "title": "Author bylines missing", "detail": "Product and editorial pages often lack author or expertise signals.", "impact": "medium" }
+          ],
+          "issues": [
+            { "id": "iss8", "title": "No trust signals on checkout", "description": "Missing contact and policy links on checkout flow.", "severity": "high" }
+          ],
+          "recommendations": [
+            { "id": "r8", "title": "Add author and review metadata", "detail": "Show author profiles and review summaries where applicable.", "effort": "medium", "priority": 1 }
+          ]
+        },
+        {
+          "id": "m_nonbranded",
+          "key": "non_branded",
+          "name": "Non-Branded Coverage",
+          "description": "Share of keywords not tied to brand terms",
+          "score": { "value": 46, "grade": "D", "trend": "down" },
+          "insights": [
+            { "id": "i9", "title": "Low rankings on intent keywords", "detail": "Few non-branded queries rank in top 10 for core categories.", "impact": "high" }
+          ],
+          "issues": [
+            { "id": "iss9", "title": "Over-reliance on branded content", "description": "Landing pages optimized for brand-first queries.", "severity": "high" }
+          ],
+          "recommendations": [
+            { "id": "r9", "title": "Create intent-led landing pages", "detail": "Build pages targeting top non-branded intents and informational queries.", "effort": "high", "priority": 1 }
+          ]
+        }
+      ]
+    },
+    {
+      "brandId": "brand_02",
+      "generatedAt": "2025-11-19T14:00:00.000Z",
+      "modules": [
+        {
+          "id": "m_technical",
+          "key": "technical",
+          "name": "Technical SEO",
+          "description": "Crawlability, indexing, sitemaps, robots",
+          "score": { "value": 88, "grade": "A", "trend": "up" },
+          "insights": [
+            { "id": "b2_i1", "title": "Sitemap well-structured", "detail": "Sitemap includes priority tags and lastmod dates.", "impact": "low" }
+          ],
+          "issues": [],
+          "recommendations": [
+            { "id": "b2_r1", "title": "Maintain current crawl hygiene", "detail": "Continue monitoring Search Console for index warnings.", "effort": "low", "priority": 4 }
+          ]
+        },
+        {
+          "id": "m_content",
+          "key": "content",
+          "name": "Content Quality",
+          "description": "Depth, uniqueness, topical coverage",
+          "score": { "value": 78, "grade": "B", "trend": "up" },
+          "insights": [
+            { "id": "b2_i2", "title": "Strong category guides", "detail": "Long-form buyer guides performing well for informational queries.", "impact": "medium" }
+          ],
+          "issues": [],
+          "recommendations": [
+            { "id": "b2_r2", "title": "Scale guides to adjacent categories", "detail": "Repurpose high-performing guides for related product lines.", "effort": "medium", "priority": 2 }
+          ]
+        },
+        {
+          "id": "m_backlinks",
+          "key": "backlinks",
+          "name": "Backlinks",
+          "description": "Link profile, authority signals",
+          "score": { "value": 84, "grade": "A", "trend": "up" },
+          "insights": [
+            { "id": "b2_i3", "title": "Healthy referring domains", "detail": "Diverse editorial links from niche publications.", "impact": "medium" }
+          ],
+          "issues": [],
+          "recommendations": []
+        },
+        {
+          "id": "m_cwv",
+          "key": "cwv",
+          "name": "Core Web Vitals",
+          "description": "LCP, FID/INP, CLS performance",
+          "score": { "value": 75, "grade": "B", "trend": "flat" },
+          "insights": [],
+          "issues": [],
+          "recommendations": []
+        },
+        {
+          "id": "m_structured",
+          "key": "structured",
+          "name": "Structured Data",
+          "description": "Schema markup, rich results",
+          "score": { "value": 92, "grade": "A", "trend": "up" },
+          "insights": [],
+          "issues": [],
+          "recommendations": []
+        },
+        {
+          "id": "m_eeat",
+          "key": "eeat",
+          "name": "E-E-A-T",
+          "description": "Expertise, Experience, Authoritativeness, Trust",
+          "score": { "value": 81, "grade": "B", "trend": "up" },
+          "insights": [],
+          "issues": [],
+          "recommendations": []
+        },
+        {
+          "id": "m_nonbranded",
+          "key": "non_branded",
+          "name": "Non-Branded Coverage",
+          "description": "Share of keywords not tied to brand terms",
+          "score": { "value": 61, "grade": "B", "trend": "flat" },
+          "insights": [],
+          "issues": [],
+          "recommendations": []
+        }
+      ]
+    },
+    {
+      "brandId": "brand_03",
+      "generatedAt": "2025-10-05T07:45:00.000Z",
+      "modules": [
+        {
+          "id": "m_technical",
+          "key": "technical",
+          "name": "Technical SEO",
+          "description": "Crawlability, indexing, sitemaps, robots",
+          "score": { "value": 50, "grade": "D", "trend": "down" },
+          "insights": [
+            { "id": "g_i1", "title": "Blocked sections in robots.txt", "detail": "Important product images blocked from crawlers.", "impact": "high" }
+          ],
+          "issues": [
+            { "id": "g_iss1", "title": "Server errors on crawl", "description": "Several endpoints return 5xx under load.", "severity": "high" }
+          ],
+          "recommendations": [
+            { "id": "g_r1", "title": "Fix server stability and unblock assets", "detail": "Coordinate infra to reduce 5xx and update robots.txt.", "effort": "high", "priority": 1 }
+          ]
+        },
+        {
+          "id": "m_content",
+          "key": "content",
+          "name": "Content Quality",
+          "description": "Depth, uniqueness, topical coverage",
+          "score": { "value": 48, "grade": "D", "trend": "down" },
+          "insights": [
+            { "id": "g_i2", "title": "Sparse documentation", "detail": "Knowledge base articles are short and not updated.", "impact": "medium" }
+          ],
+          "issues": [],
+          "recommendations": [
+            { "id": "g_r2", "title": "Audit and expand KB content", "detail": "Update and expand high-traffic support articles.", "effort": "medium", "priority": 2 }
+          ]
+        },
+        {
+          "id": "m_backlinks",
+          "key": "backlinks",
+          "name": "Backlinks",
+          "description": "Link profile, authority signals",
+          "score": { "value": 40, "grade": "F", "trend": "down" },
+          "insights": [
+            { "id": "g_i3", "title": "Low domain authority signals", "detail": "Few editorial backlinks and low citation flow.", "impact": "high" }
+          ],
+          "issues": [],
+          "recommendations": [
+            { "id": "g_r3", "title": "Invest in content-led link campaigns", "detail": "Create industry reports and outreach to gain editorial links.", "effort": "high", "priority": 1 }
+          ]
+        },
+        {
+          "id": "m_cwv",
+          "key": "cwv",
+          "name": "Core Web Vitals",
+          "description": "LCP, FID/INP, CLS performance",
+          "score": { "value": 53, "grade": "D", "trend": "down" },
+          "insights": [],
+          "issues": [],
+          "recommendations": []
+        },
+        {
+          "id": "m_structured",
+          "key": "structured",
+          "name": "Structured Data",
+          "description": "Schema markup, rich results",
+          "score": { "value": 35, "grade": "F", "trend": "down" },
+          "insights": [],
+          "issues": [],
+          "recommendations": [
+            { "id": "g_r4", "title": "Implement base product schema", "detail": "Start with basic Product schema across catalog pages.", "effort": "medium", "priority": 2 }
+          ]
+        },
+        {
+          "id": "m_eeat",
+          "key": "eeat",
+          "name": "E-E-A-T",
+          "description": "Expertise, Experience, Authoritativeness, Trust",
+          "score": { "value": 52, "grade": "D", "trend": "flat" },
+          "insights": [],
+          "issues": [],
+          "recommendations": []
+        },
+        {
+          "id": "m_nonbranded",
+          "key": "non_branded",
+          "name": "Non-Branded Coverage",
+          "description": "Share of keywords not tied to brand terms",
+          "score": { "value": 33, "grade": "F", "trend": "down" },
+          "insights": [],
+          "issues": [],
+          "recommendations": [
+            { "id": "g_r5", "title": "Keyword intent mapping and new pages", "detail": "Map top non-branded intents and build targeted pages.", "effort": "high", "priority": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}
