@@ -1,7 +1,7 @@
 import React from 'react';
-import copy from '../../src/data/copy.json';
-import { H1, H2, P } from '../../src/components/ui/Typography';
-import Card from '../../src/components/ui/Card';
+import copy from '@/data/copy.json';
+import { H1, H2, P } from '@/components/ui/Typography';
+import Card from '@/components/ui/Card';
 
 export default function About() {
   const data = copy.about;
