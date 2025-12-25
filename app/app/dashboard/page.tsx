@@ -9,7 +9,6 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-12">
-      {/* Header */}
       <section className="flex flex-col gap-2">
         <H1>Dashboard</H1>
         <P className="text-slate-600 max-w-2xl">
@@ -18,12 +17,10 @@ export default function DashboardPage() {
         </P>
       </section>
 
-      {/* Snapshot metrics */}
       <section>
         <SnapshotGrid />
       </section>
 
-      {/* Context footer */}
       <section className="pt-4 border-t">
         <div className="text-sm text-slate-600">
           Viewing data for:{' '}

@@ -6,7 +6,6 @@ import { H1, P } from '@/components/ui/Typography';
 export default function AuditPage() {
   return (
     <div className="space-y-12">
-      {/* Page header */}
       <section className="flex flex-col gap-2">
         <H1>Audit</H1>
         <P className="text-slate-600 max-w-2xl">
@@ -16,7 +15,6 @@ export default function AuditPage() {
         </P>
       </section>
 
-      {/* Core audit workspace */}
       <section className="min-h-[60vh]">
         <ModuleDetail />
       </section>
