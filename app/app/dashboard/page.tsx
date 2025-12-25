@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
-import { H1, P } from '../../../../src/components/ui/Typography';
-import SnapshotGrid from '../../../../src/components/features/dashboard/SnapshotGrid';
-import useBrandStore from '../../../../src/state/useBrandStore';
+import { H1, P } from '@/components/ui/Typography';
+import SnapshotGrid from '@/components/features/dashboard/SnapshotGrid';
+import useBrandStore from '@/state/useBrandStore';
 
 export default function DashboardPage() {
   const currentBrand = useBrandStore((s) => s.currentBrand);
