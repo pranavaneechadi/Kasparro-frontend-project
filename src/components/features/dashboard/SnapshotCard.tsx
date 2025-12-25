@@ -14,4 +14,4 @@ export const SnapshotCard: React.FC<Props> = ({ title, value, note }) => {
   );
 };
 
-export default SnapshotCard;
+export default SnapshotCard; 
