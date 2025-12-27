@@ -12,8 +12,9 @@ export default function PlatformPage() {
       <section>
         <H1>{data.title}</H1>
         <P className="mt-4 max-w-2xl text-slate-600">
-          A system-level view of how Kasparro ingests data, applies AI context,
-          and produces actionable audit outputs.
+          Understand search as AI systems do — map intent, trust signals, and
+          outcomes so you can prioritize visibility and remediation that moves
+          the business needle.
         </P>
       </section>
 

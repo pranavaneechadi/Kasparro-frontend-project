@@ -1,12 +1,13 @@
 # Kasparro — AI-native SEO & Brand Intelligence (Mocked Frontend)
 
-This repository is a focused, production-minded frontend demo for Kasparro — an AI-native SEO and Brand Intelligence platform. It uses Next.js (App Router), TypeScript, Tailwind CSS styles (utility classes used, Tailwind devDeps may need to be installed), Zustand for minimal state, and mocked JSON as the single source of truth for UI content.
+This repository is a focused, production-minded frontend demo for Kasparro — an AI-native SEO and Brand Intelligence platform. It uses Next.js (App Router), TypeScript, Tailwind CSS styles (utility classes used — tailwindcss/postcss/autoprefixer are included in devDependencies), Zustand for minimal state, and mocked JSON as the single source of truth for UI content.
 
 ## What you'll find
 
 - `app/` — Next.js App Router routes. Public pages at `/`, `/platform`, `/about`. Product area under `/app/*` with nested layout for `/app/dashboard`, `/app/audit`, `/app/architecture`.
 - `src/components/` — UI primitives (`ui/`), layout (`layout/`), and feature components (`features/`) split by domain (dashboard, audit).
-- `src/data/` — All copy and mocked datasets as JSON: `brands.json`, `audits.json`, `copy.json` (no hardcoded UI text in JSX).
+ - `src/data/` — All copy and mocked datasets as JSON: `brands.json`, `audits.json`, `copy.json` (no hardcoded UI text in JSX).
+ - `tests/` — Basic unit tests using Jest + React Testing Library (foundation for further coverage).
 - `src/types/` — TypeScript interfaces modeling Brand, AuditModule, AuditInsight, AuditIssue, AuditRecommendation, AuditScore, and report shapes.
 - `src/state/` — `useBrandStore.ts` (Zustand) holding selected brand and module plus derived current report/module.
 - `src/hooks/useMockData.ts` — Tiny typed accessors over JSON data.
@@ -45,7 +46,7 @@ npm run dev
 ```
 Open http://localhost:3000
 
-Notes: Next.js may prompt to install `@types/*` packages automatically when running dev; allow it or run `npm install` afterwards.
+Notes: Tailwind devDependencies (`tailwindcss`, `postcss`, `autoprefixer`) are included in devDependencies so the project builds on Vercel or locally after `npm install`. Basic unit tests were added (run with `npm test`) as a starting point rather than full coverage.
 
 ## Tradeoffs and shortcuts
 
